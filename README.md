@@ -20,8 +20,12 @@ stack_svg -f top.svg -f bottom.svg -o stacked-top-bottom.svg
 ![](bottom.svg)
 
 ### stacked-top-bottom.svg
-![](svg_stacked-top-bottom.svg)
+The generated files are centered at 0,0 and don't have a bounding box which confuses image display
+but plays better as a CAD format.
+
+
+![](svg_stacked-top-bottom.png)
 
 This can be used for different laser cutter settings after some edits:
-![](svg_stacked-top-bottom-laser-cut.svg)
 
+![](svg_stacked-top-bottom-laser-cut.png)
