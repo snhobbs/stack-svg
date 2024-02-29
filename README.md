@@ -1,35 +1,27 @@
 # stack-svg
 
+Simple command line tool for stacking SVGs. Importing SVGs into inkscape uses a bounding box and
+uses a corner as the reference point. That means that even if the SVG curves lineup then importing into inkscape or illustrator discards the actual reference point you used to design the file with.
 
-.. image:: https://img.shields.io/pypi/v/stack_svg.svg
-        :target: https://pypi.python.org/pypi/stack_svg
+stack-svg just imports the different svgs and puts them ontop of each other using the original reference point. The resulting svg can then be cleaned up using your favorite vector file editor.
 
-.. image:: https://img.shields.io/travis/snhobbs/stack_svg.svg
-        :target: https://travis-ci.com/snhobbs/stack_svg
+This is a command line wrapper around [svgutils](https://svgutils.readthedocs.io/en/latest/). To do more checkout their library!
 
-.. image:: https://readthedocs.org/projects/stack-svg/badge/?version=latest
-        :target: https://stack-svg.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
+## Usage
 
+```sh
+stack_svg -f top.svg -f bottom.svg -o stacked-top-bottom.svg
+```
 
+### top.svg
+![](top.svg)
 
+### bottom.svg
+![](bottom.svg)
 
-Simple command line tool to stack SVGs ontop of each other
+### stacked-top-bottom.svg
+![](svg_stacked-top-bottom.svg)
 
+This can be used for different laser cutter settings after some edits:
+![](svg_stacked-top-bottom-laser-cut.svg)
 
-+ Free software: MIT license
-+ Documentation: https://stack-svg.readthedocs.io.
-
-
-Features
---------
-
-* TODO
-
-Credits
--------
-
-This package was created with Cookiecutter and the audreyr/cookiecutter-pypackage project template.
-
-+ Cookiecutter: https://github.com/audreyr/cookiecutter
-+ audreyr/cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
